@@ -15,6 +15,7 @@
 #import "ParkSpotTableViewCell.h"
 #import "ParkSpotDetailVC.h"
 #import "FlowManager.h"
+#import "UIImage+Helper.h"
 
 @interface ParkSpotListVC () <UITableViewDelegate, UITableViewDataSource>
 
@@ -40,6 +41,9 @@
     self.lastGetAPISection = 0;
     self.parkSpotList = [[NSMutableDictionary alloc] init];
     self.parkKeyList = [[NSMutableArray alloc] init];
+    
+    self.tableview.rowHeight = UITableViewAutomaticDimension;
+    self.tableview.estimatedRowHeight = 45;
 }
 
 - (void)getParkSpotsData {
@@ -79,10 +83,6 @@
             for ( NSArray* parkSpotList in [tmpSelf.parkSpotList allValues]) {
                 nTotalParkSpots = nTotalParkSpots+parkSpotList.count;
             }
-            NSLog(@"currentoffset = %ld", _currentOffset);
-            NSLog(@"parkspotlist count = %ld", tmpSelf.parkSpotList.count);
-            NSLog(@"parkKEYlist count = %ld", tmpSelf.parkKeyList.count);
-            NSLog(@"total park spots count = %ld", nTotalParkSpots);
         });
         
         
@@ -130,45 +130,6 @@
         return @"";
     }
 }
-/*
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 18)];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, tableView.frame.size.width, 18)];
-    [label setFont:[UIFont boldSystemFontOfSize:12]];
-    NSString *string;
-    if (self.parkKeyList.count>section) {
-        string = [self.parkKeyList objectAtIndex:section];
-    }
-    if (string.length>0) {
-        [label setText:string];
-    }
-    [view addSubview:label];
-    [view setBackgroundColor:[UIColor colorWithRed:166/255.0 green:177/255.0 blue:186/255.0 alpha:1.0]]; //your background color...
-    return view;
-}
-*/
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    
-    /*
-    if (indexPath.row == 0 && isiPhone)
-    {
-        return _movieInfoGroup.view.frame.size.height;
-    }
-    else if (indexPath.row == 1)
-    {
-        return _movieInfoRecommendGroup.view.frame.size.height;
-    }
-    else if (indexPath.row == 2)
-    {
-        return _promoteBannerGroup.view.frame.size.height;
-    }
-    */
-    
-    return 100;
-}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -185,26 +146,18 @@
             cell.parkSpotName.text = item.spotName;
             cell.introduction.text = item.introduction;
             [cell.parkImg sd_setImageWithURL:[NSURL URLWithString:item.imgUrl]];
-            
-            NSLog(@"========  index section = %ld, row = %ld", indexPath.section, indexPath.row);
-            NSLog(@"key name = %@, parkname = %@, spotname = %@", parkKey, item.parkName, item.spotName);
-            
         }
     }
     
+    NSLog(@"=== row = %ld ====", indexPath.row);
+    NSLog(@"cell frame = %@, contentview frame = %@", NSStringFromCGRect(cell.frame),NSStringFromCGRect(cell.contentView.frame));
     
-    
-    
-
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     self.selectedIdx = [indexPath copy];
-    
-//    [self performSegueWithIdentifier:SHOW_PARKSPOTDETAILVC sender:self];
-    
     UIStoryboard *storyboard=[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     ParkSpotDetailVC *destVC = [storyboard instantiateViewControllerWithIdentifier:@"ParkSpotDetailVC"];
     
@@ -231,31 +184,8 @@
     NSUInteger lazyLoadingSection = (self.parkKeyList.count - TLLBS_COUNT);
     if ( ( lazyLoadingSection == indexPath.section) && (self.lastGetAPISection != indexPath.section) ) {
         self.lastGetAPISection = indexPath.section;
-        NSLog(@"parkkeylist = %ld, will display section = %ld row = %ld", self.parkKeyList.count, indexPath.section, indexPath.row);
         [self getParkSpotsData];
     }
 }
 
-#pragma mark - Segue
-/*
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    ParkSpotDetailVC* destVC = segue.destinationViewController;
-    if ([destVC isKindOfClass:[ParkSpotDetailVC class]]) {
-        
-        if (self.parkKeyList.count>self.selectedIdx.section) {
-            NSString* key = [self.parkKeyList objectAtIndex:self.selectedIdx.section];
-            
-            NSArray* array = [self.parkSpotList objectForKey:key];
-            if (array) {
-                destVC.parkSpotList = [[NSArray alloc] initWithArray:array copyItems:YES];
-            }
-            
-            
-            ParkSpotItem* PSItem = [array objectAtIndex:self.selectedIdx.row];
-            destVC.currentSelectedSpotName = PSItem.spotName;
-        }
-    }
-}
-*/
 @end
