@@ -110,7 +110,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
     
-    NSLog(@"imglist count = %ld", self.parkSpotImgList.count);
     [self.parkSpotImgList removeAllObjects];
 }
 

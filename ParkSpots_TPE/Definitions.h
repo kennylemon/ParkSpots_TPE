@@ -9,12 +9,10 @@
 #ifndef Definitions_h
 #define Definitions_h
 
-// 臺北市公園、綠地、廣場資料
-//static NSString * const PST_PARK_RID = @"8f6fcb24-290b-461d-9d34-72ed1b3f51f0";
 // 臺北市公園、綠地、廣場內重要景點介紹
 static NSString * const PST_SPOT_RID = @"bf073841-c734-49bf-a97f-3757a6013812";
 
-// get
+// API related
 static NSString * const PST_API_URL = @"http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire";
 static NSString * const PST_API_LIMIT = @"100";
 static NSString * const PST_QRY_RID = @"&rid=%@";
@@ -28,12 +26,6 @@ static int const TLLBS_COUNT = 10;
 static NSString * const SHOW_PARKSPOTDETAILVC = @"ParkSpotDetail";
 
 // park spot detail cell type reuse id
-static NSString * const PSD_IMG_CELL = @"ParkSpotDImgCell";
-static NSString * const PSD_INFO_CELL = @"ParkSpotDInfoCell";
-static NSString * const PSD_INTRO_CELL = @"ParkSpotDIntroCell";
-static NSString * const PSD_RELATE_CELL = @"ParkSpotDRelateCell";
-
-static NSString * const PSD_RELATE_COL_CELL = @"ParkSpotDRecomdCell";
 static NSString * const PSD_RCMD_CELL = @"PSDRcmdCell";
 
 

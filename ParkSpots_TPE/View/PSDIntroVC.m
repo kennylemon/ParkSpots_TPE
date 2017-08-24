@@ -31,29 +31,15 @@
     // Do any additional setup after loading the view from its nib.
     
     self.introL.text = self.intro;
-    NSLog(@"introduction = %@", self.introL.text);
-    
     CGRect rcIntro = self.introL.frame;
-    NSLog(@"ori introL rect = %@", NSStringFromCGRect(rcIntro));
-    
     CGSize expectSize = [self.introL sizeThatFits:CGSizeMake(CGRectGetWidth(self.introL.frame), CGFLOAT_MAX)];
-    NSLog(@"exptected size = %@", NSStringFromCGSize(expectSize));
-    
-    
-    
-    
     int hegihtDiff = expectSize.height - rcIntro.size.height;
     rcIntro.size.height = expectSize.height;
     self.introL.frame = rcIntro;
-    NSLog(@"new introL rect = %@", NSStringFromCGRect(self.introL.frame));
     
     CGRect rcView = self.view.frame;
-    NSLog(@"ori self.view rect = %@", NSStringFromCGRect(rcView));
     rcView.size.height = rcView.size.height + hegihtDiff;
     self.view.frame = rcView;
-    NSLog(@"new introL rect = %@", NSStringFromCGRect(self.view.frame));
-    
-    NSLog(@"123");
 }
 
 - (void)didReceiveMemoryWarning {
