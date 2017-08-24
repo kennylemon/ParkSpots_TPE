@@ -12,5 +12,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *parkName;
 @property (weak, nonatomic) IBOutlet UILabel *parkSpotName;
+@property (weak, nonatomic) IBOutlet UILabel *introduction;
 @property (weak, nonatomic) IBOutlet UIImageView *parkImg;
+
+
 @end

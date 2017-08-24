@@ -1,5 +1,5 @@
 //
-//  ParkListVC.h
+//  ParkSpotListVC.h
 //  ParkSpots_TPE
 //
 //  Created by Kenny Lin on 2017/8/21.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ParkListVC : UIViewController
+@interface ParkSpotListVC : UIViewController
 
 
 @end

@@ -12,7 +12,7 @@
 #import "Definitions.h"
 #import "ParkSpotItem.h"
 
-static NSString * const g_fixedLimit = @"20";
+
 
 @interface dataTPEService () {
     AFHTTPSessionManager *afSessionMngr;
@@ -77,7 +77,7 @@ static NSString * const g_fixedLimit = @"20";
                        success:(void (^)(NSUInteger, NSUInteger, NSUInteger, NSDictionary*))successHandler
                           fail:(void (^)(NSError*))failHandler {
     
-    NSString* api = [Utilities apiUrlWithRid:PST_SPOT_RID withLimt:g_fixedLimit withOffset:offset];
+    NSString* api = [Utilities apiUrlWithRid:PST_SPOT_RID withLimt:PST_API_LIMIT withOffset:offset];
     
     NSLog(@"api = %@", api);
     [self getData:api success:^(NSUInteger count, NSUInteger limit, NSUInteger offset, NSArray *itemList) {

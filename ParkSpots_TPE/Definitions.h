@@ -16,9 +16,28 @@ static NSString * const PST_SPOT_RID = @"bf073841-c734-49bf-a97f-3757a6013812";
 
 // get
 static NSString * const PST_API_URL = @"http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire";
+//static NSString * const PST_API_LIMIT = @"100";
+static NSString * const PST_API_LIMIT = @"20";
 static NSString * const PST_QRY_RID = @"&rid=%@";
 static NSString * const PST_QRY_QSTATEMENT = @"&q=%@";
 static NSString * const PST_QRY_LIMIT = @"&limit=%@";
 static NSString * const PST_QRY_OFFSET = @"&offset=%@";
+
+// trigger lazy loading before section
+//static int const TLLBS_COUNT = 10;
+static int const TLLBS_COUNT = 2;
+
+static NSString * const SHOW_PARKSPOTDETAILVC = @"ParkSpotDetail";
+
+// park spot detail cell type reuse id
+static NSString * const PSD_IMG_CELL = @"ParkSpotDImgCell";
+static NSString * const PSD_INFO_CELL = @"ParkSpotDInfoCell";
+static NSString * const PSD_INTRO_CELL = @"ParkSpotDIntroCell";
+static NSString * const PSD_RELATE_CELL = @"ParkSpotDRelateCell";
+
+static NSString * const PSD_RELATE_COL_CELL = @"ParkSpotDRecomdCell";
+static NSString * const PSD_RCMD_CELL = @"PSDRcmdCell";
+
+
 
 #endif /* Definitions_h */

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0id-Fb-Mpn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1Ou-Wf-Umv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -8,10 +8,27 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Park ListVC-->
+        <!--Navigation Controller-->
+        <scene sceneID="B0D-jo-osO">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="1Ou-Wf-Umv" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bly-1e-Tht">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0id-Fb-Mpn" kind="relationship" relationship="rootViewController" id="k13-JH-FsS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fOx-AT-YYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-239" y="36"/>
+        </scene>
+        <!--Park Spot ListVC-->
         <scene sceneID="E4S-hx-MC2">
             <objects>
-                <tableViewController id="0id-Fb-Mpn" customClass="ParkListVC" sceneMemberID="viewController">
+                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="0id-Fb-Mpn" customClass="ParkSpotListVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Q5w-XB-wmV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,26 +42,34 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iwm-Sx-zPr">
-                                            <rect key="frame" x="134" y="0.0" width="233" height="21"/>
+                                            <rect key="frame" x="130" y="0.0" width="240" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfk-O0-0yJ">
-                                            <rect key="frame" x="134" y="23" width="233" height="21"/>
+                                            <rect key="frame" x="130" y="21" width="240" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lwN-mA-CU2">
-                                            <rect key="frame" x="8" y="0.0" width="118" height="36"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lwN-mA-CU2">
+                                            <rect key="frame" x="0.0" y="0.0" width="118" height="60"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5B-FY-3dy">
+                                            <rect key="frame" x="130" y="42" width="240" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="introduction" destination="h5B-FY-3dy" id="O1o-Ud-DNy"/>
                                     <outlet property="parkImg" destination="lwN-mA-CU2" id="NXk-Ni-ZPH"/>
                                     <outlet property="parkName" destination="Iwm-Sx-zPr" id="JiL-Cg-QCo"/>
                                     <outlet property="parkSpotName" destination="sfk-O0-0yJ" id="j7d-aq-Csw"/>
@@ -56,13 +81,46 @@
                             <outlet property="delegate" destination="0id-Fb-Mpn" id="wbT-BF-hqr"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="UqQ-ih-Z04"/>
                     <connections>
-                        <outlet property="tableview" destination="Q5w-XB-wmV" id="nlV-l8-uol"/>
+                        <outlet property="tableview" destination="Q5w-XB-wmV" id="Rmf-V6-Y1Q"/>
+                        <segue destination="biJ-5K-Eee" kind="showDetail" identifier="ParkSpotDetail" id="0G5-qh-flR"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NpG-oS-Zho" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="744.79999999999995" y="35.532233883058474"/>
+        </scene>
+        <!--Park Spot DetailVC-->
+        <scene sceneID="tit-io-nbA">
+            <objects>
+                <tableViewController storyboardIdentifier="ParkSpotDetailVC" id="biJ-5K-Eee" customClass="ParkSpotDetailVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Y0q-b2-5YK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outlet property="dataSource" destination="biJ-5K-Eee" id="oL7-WH-2QZ"/>
+                            <outlet property="delegate" destination="biJ-5K-Eee" id="mDu-bM-tYH"/>
+                            <outletCollection property="gestureRecognizers" destination="Utn-LQ-0pv" appends="YES" id="1ba-Re-mID"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="tableview" destination="Y0q-b2-5YK" id="bel-m5-3Ce"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lTh-FT-xlE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="Utn-LQ-0pv">
+                    <connections>
+                        <action selector="backToPSList:" destination="biJ-5K-Eee" id="0Se-gf-fVL"/>
+                        <outlet property="delegate" destination="biJ-5K-Eee" id="piF-wt-Pcz"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1685.5999999999999" y="35.532233883058474"/>
         </scene>
     </scenes>
 </document>
