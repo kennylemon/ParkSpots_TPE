@@ -98,14 +98,12 @@
     [self dataInit];
     
     [self getParkSpotsData];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-    self.edgesForExtendedLayout=UIRectEdgeNone;
-    self.extendedLayoutIncludesOpaqueBars=NO;
-    self.automaticallyAdjustsScrollViewInsets=NO;
+
 }
 
 - (void)didReceiveMemoryWarning {
