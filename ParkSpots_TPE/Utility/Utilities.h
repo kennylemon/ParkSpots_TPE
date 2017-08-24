@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface Utilities : NSObject
 
@@ -14,4 +15,5 @@
 + (NSString*)apiUrlWithRid:(NSString*)rid;
 
 + (NSString*)apiUrlWithRid:(NSString*)rid withLimt:(NSString*)limit withOffset:(NSUInteger)offset;
+
 @end

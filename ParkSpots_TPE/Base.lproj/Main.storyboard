@@ -62,7 +62,7 @@
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfk-O0-0yJ">
                                                             <rect key="frame" x="0.0" y="20.5" width="255" height="2.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -103,7 +103,6 @@
                             <outlet property="delegate" destination="0id-Fb-Mpn" id="wbT-BF-hqr"/>
                         </connections>
                     </tableView>
-                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="UqQ-ih-Z04"/>
                     <connections>
                         <outlet property="tableview" destination="Q5w-XB-wmV" id="Rmf-V6-Y1Q"/>

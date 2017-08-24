@@ -15,7 +15,6 @@
 #import "ParkSpotTableViewCell.h"
 #import "ParkSpotDetailVC.h"
 #import "FlowManager.h"
-#import "UIImage+Helper.h"
 
 @interface ParkSpotListVC () <UITableViewDelegate, UITableViewDataSource>
 
@@ -23,7 +22,9 @@
 @property (nonatomic, assign) NSUInteger lastGetAPISection;
 @property (nonatomic, strong) NSIndexPath *selectedIdx;
 @property (nonatomic, strong) NSMutableDictionary<NSString*,NSArray*> *parkSpotList;
+@property (nonatomic, strong) NSMutableDictionary<NSIndexPath*,UIImage*> *parkSpotImgList;
 @property (nonatomic, strong) NSMutableArray<NSString*> *parkKeyList;
+@property (nonatomic, strong) UIImage *defaultImg;
 @property (strong, nonatomic) IBOutlet UITableView *tableview;
 
 @end
@@ -40,10 +41,13 @@
     self.currentOffset = 0;
     self.lastGetAPISection = 0;
     self.parkSpotList = [[NSMutableDictionary alloc] init];
+    self.parkSpotImgList  = [[NSMutableDictionary alloc] init];
     self.parkKeyList = [[NSMutableArray alloc] init];
     
     self.tableview.rowHeight = UITableViewAutomaticDimension;
     self.tableview.estimatedRowHeight = 45;
+    
+    self.defaultImg = [UIImage imageNamed:@"Image"];
 }
 
 - (void)getParkSpotsData {
@@ -53,7 +57,6 @@
         
         
         dispatch_async( dispatch_get_global_queue(0, 0), ^{
-            NSLog(@"currentoffset = %ld, limit = %ld", tmpSelf.currentOffset, limit);
             tmpSelf.currentOffset = tmpSelf.currentOffset + limit;
             
             NSMutableArray *newParkKeyList = [[NSMutableArray alloc] init];
@@ -72,8 +75,6 @@
             }
             [tmpSelf.parkKeyList addObjectsFromArray:newParkKeyList];
 
-            
-            //
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableview reloadData];
             });
@@ -99,10 +100,20 @@
     [self getParkSpotsData];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.edgesForExtendedLayout=UIRectEdgeNone;
+    self.extendedLayoutIncludesOpaqueBars=NO;
+    self.automaticallyAdjustsScrollViewInsets=NO;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
+    NSLog(@"imglist count = %ld", self.parkSpotImgList.count);
+    [self.parkSpotImgList removeAllObjects];
 }
 
 #pragma mark - UITableViewDataSource
@@ -145,12 +156,20 @@
             cell.parkName.text = item.parkName;
             cell.parkSpotName.text = item.spotName;
             cell.introduction.text = item.introduction;
-            [cell.parkImg sd_setImageWithURL:[NSURL URLWithString:item.imgUrl]];
+            
+            UIImage* img = [self.parkSpotImgList objectForKey:indexPath];
+            if (img) {
+                cell.parkImg.image = img;
+            } else {
+                [cell.parkImg sd_setImageWithURL:[NSURL URLWithString:item.imgUrl] placeholderImage:self.defaultImg options:0 completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL){
+                    if (image) {
+                        [self.parkSpotImgList setObject:image forKey:indexPath];
+                    }
+                }];
+            }
+            
         }
     }
-    
-    NSLog(@"=== row = %ld ====", indexPath.row);
-    NSLog(@"cell frame = %@, contentview frame = %@", NSStringFromCGRect(cell.frame),NSStringFromCGRect(cell.contentView.frame));
     
     return cell;
 }
@@ -168,8 +187,7 @@
         if (array) {
             destVC.parkSpotList = [[NSArray alloc] initWithArray:array copyItems:YES];
         }
-        
-        
+
         ParkSpotItem* PSItem = [array objectAtIndex:self.selectedIdx.row];
         destVC.currentSelectedSpotName = PSItem.spotName;
     }
