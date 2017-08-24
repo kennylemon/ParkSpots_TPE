@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9286D6E050FD777934A78784 /* libPods-ParkSpots_TPE.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F0A94D566DD6D83AF821FC /* libPods-ParkSpots_TPE.a */; };
+		C51643201F4D88B5001293AD /* ParkSpotTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C516431F1F4D88B5001293AD /* ParkSpotTableViewCell.m */; };
+		C52DB2CB1F4DF71E00BE58E3 /* ParkSpotDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C52DB2CA1F4DF71E00BE58E3 /* ParkSpotDetailVC.m */; };
+		C5536C9C1F4F512300B5BB6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5536C9A1F4F512300B5BB6C /* LaunchScreen.storyboard */; };
+		C55F2E171F4BCD1F009E3AB5 /* ParkSpotListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C55F2E161F4BCD1F009E3AB5 /* ParkSpotListVC.m */; };
+		C577B4291F4C8C9D0031D55F /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C577B4281F4C8C9D0031D55F /* Utilities.m */; };
+		C578DE381F4D16B400DC8F0B /* dataTPEService.m in Sources */ = {isa = PBXBuildFile; fileRef = C578DE371F4D16B400DC8F0B /* dataTPEService.m */; };
+		C578DE3B1F4D4E9300DC8F0B /* ParkSpotItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C578DE3A1F4D4E9300DC8F0B /* ParkSpotItem.m */; };
+		C5A374551F4EBEDC0039D380 /* PSDImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A374531F4EBEDC0039D380 /* PSDImageVC.m */; };
+		C5A374561F4EBEDC0039D380 /* PSDImageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A374541F4EBEDC0039D380 /* PSDImageVC.xib */; };
+		C5A3745A1F4ECA950039D380 /* PSDInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A374581F4ECA950039D380 /* PSDInfoVC.m */; };
+		C5A3745B1F4ECA950039D380 /* PSDInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A374591F4ECA950039D380 /* PSDInfoVC.xib */; };
+		C5A374621F4ECDD20039D380 /* PSDIntroVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A374601F4ECDD20039D380 /* PSDIntroVC.m */; };
+		C5A374631F4ECDD20039D380 /* PSDIntroVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A374611F4ECDD20039D380 /* PSDIntroVC.xib */; };
+		C5A374671F4ECDF60039D380 /* PSDRelatedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A374651F4ECDF60039D380 /* PSDRelatedVC.m */; };
+		C5A374681F4ECDF60039D380 /* PSDRelatedVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A374661F4ECDF60039D380 /* PSDRelatedVC.xib */; };
+		C5A3746C1F4EE1A30039D380 /* PSDRcmdCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A3746A1F4EE1A30039D380 /* PSDRcmdCollectionViewCell.m */; };
+		C5A3746D1F4EE1A30039D380 /* PSDRcmdCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A3746B1F4EE1A30039D380 /* PSDRcmdCollectionViewCell.xib */; };
+		C5CDE56F1F4E74F400EC3142 /* ParkSpotDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CDE56E1F4E74F400EC3142 /* ParkSpotDCollectionViewCell.m */; };
+		C5CDE5721F4EAF8E00EC3142 /* FlowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CDE5711F4EAF8E00EC3142 /* FlowManager.m */; };
+		C5FB96AB1F4B346800C023FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB96AA1F4B346800C023FA /* main.m */; };
+		C5FB96AE1F4B346800C023FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB96AD1F4B346800C023FA /* AppDelegate.m */; };
+		C5FB96B41F4B346800C023FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5FB96B21F4B346800C023FA /* Main.storyboard */; };
+		C5FB96B61F4B346800C023FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5FB96B51F4B346800C023FA /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		777AA64AFDC289288A01EB52 /* Pods-ParkSpots_TPE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkSpots_TPE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParkSpots_TPE/Pods-ParkSpots_TPE.debug.xcconfig"; sourceTree = "<group>"; };
+		88F0A94D566DD6D83AF821FC /* libPods-ParkSpots_TPE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParkSpots_TPE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CA546CE18AC23C22AA9B552 /* Pods-ParkSpots_TPE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkSpots_TPE.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParkSpots_TPE/Pods-ParkSpots_TPE.release.xcconfig"; sourceTree = "<group>"; };
+		C516431E1F4D88B5001293AD /* ParkSpotTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParkSpotTableViewCell.h; path = View/ParkSpotTableViewCell.h; sourceTree = "<group>"; };
+		C516431F1F4D88B5001293AD /* ParkSpotTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParkSpotTableViewCell.m; path = View/ParkSpotTableViewCell.m; sourceTree = "<group>"; };
+		C5284EF71F4C7D9100468C08 /* Definitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Definitions.h; sourceTree = "<group>"; };
+		C52DB2C91F4DF71E00BE58E3 /* ParkSpotDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParkSpotDetailVC.h; path = Controller/ParkSpotDetailVC.h; sourceTree = "<group>"; };
+		C52DB2CA1F4DF71E00BE58E3 /* ParkSpotDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParkSpotDetailVC.m; path = Controller/ParkSpotDetailVC.m; sourceTree = "<group>"; };
+		C5536C9B1F4F512300B5BB6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C55F2E151F4BCD1F009E3AB5 /* ParkSpotListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParkSpotListVC.h; path = Controller/ParkSpotListVC.h; sourceTree = "<group>"; };
+		C55F2E161F4BCD1F009E3AB5 /* ParkSpotListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParkSpotListVC.m; path = Controller/ParkSpotListVC.m; sourceTree = "<group>"; };
+		C577B4271F4C8C9D0031D55F /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utilities.h; path = Utility/Utilities.h; sourceTree = "<group>"; };
+		C577B4281F4C8C9D0031D55F /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utilities.m; path = Utility/Utilities.m; sourceTree = "<group>"; };
+		C578DE361F4D16B400DC8F0B /* dataTPEService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dataTPEService.h; path = API/dataTPEService.h; sourceTree = "<group>"; };
+		C578DE371F4D16B400DC8F0B /* dataTPEService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = dataTPEService.m; path = API/dataTPEService.m; sourceTree = "<group>"; };
+		C578DE391F4D4E9300DC8F0B /* ParkSpotItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParkSpotItem.h; path = Model/ParkSpotItem.h; sourceTree = "<group>"; };
+		C578DE3A1F4D4E9300DC8F0B /* ParkSpotItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParkSpotItem.m; path = Model/ParkSpotItem.m; sourceTree = "<group>"; };
+		C5A374521F4EBEDC0039D380 /* PSDImageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSDImageVC.h; path = View/PSDImageVC.h; sourceTree = "<group>"; };
+		C5A374531F4EBEDC0039D380 /* PSDImageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSDImageVC.m; path = View/PSDImageVC.m; sourceTree = "<group>"; };
+		C5A374541F4EBEDC0039D380 /* PSDImageVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSDImageVC.xib; path = View/PSDImageVC.xib; sourceTree = "<group>"; };
+		C5A374571F4ECA950039D380 /* PSDInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSDInfoVC.h; path = View/PSDInfoVC.h; sourceTree = "<group>"; };
+		C5A374581F4ECA950039D380 /* PSDInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSDInfoVC.m; path = View/PSDInfoVC.m; sourceTree = "<group>"; };
+		C5A374591F4ECA950039D380 /* PSDInfoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSDInfoVC.xib; path = View/PSDInfoVC.xib; sourceTree = "<group>"; };
+		C5A3745F1F4ECDD20039D380 /* PSDIntroVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSDIntroVC.h; path = View/PSDIntroVC.h; sourceTree = "<group>"; };
+		C5A374601F4ECDD20039D380 /* PSDIntroVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSDIntroVC.m; path = View/PSDIntroVC.m; sourceTree = "<group>"; };
+		C5A374611F4ECDD20039D380 /* PSDIntroVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSDIntroVC.xib; path = View/PSDIntroVC.xib; sourceTree = "<group>"; };
+		C5A374641F4ECDF60039D380 /* PSDRelatedVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSDRelatedVC.h; path = View/PSDRelatedVC.h; sourceTree = "<group>"; };
+		C5A374651F4ECDF60039D380 /* PSDRelatedVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSDRelatedVC.m; path = View/PSDRelatedVC.m; sourceTree = "<group>"; };
+		C5A374661F4ECDF60039D380 /* PSDRelatedVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSDRelatedVC.xib; path = View/PSDRelatedVC.xib; sourceTree = "<group>"; };
+		C5A374691F4EE1A30039D380 /* PSDRcmdCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSDRcmdCollectionViewCell.h; path = View/PSDRcmdCollectionViewCell.h; sourceTree = "<group>"; };
+		C5A3746A1F4EE1A30039D380 /* PSDRcmdCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSDRcmdCollectionViewCell.m; path = View/PSDRcmdCollectionViewCell.m; sourceTree = "<group>"; };
+		C5A3746B1F4EE1A30039D380 /* PSDRcmdCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSDRcmdCollectionViewCell.xib; path = View/PSDRcmdCollectionViewCell.xib; sourceTree = "<group>"; };
+		C5CDE56D1F4E74F400EC3142 /* ParkSpotDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParkSpotDCollectionViewCell.h; path = View/ParkSpotDCollectionViewCell.h; sourceTree = "<group>"; };
+		C5CDE56E1F4E74F400EC3142 /* ParkSpotDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParkSpotDCollectionViewCell.m; path = View/ParkSpotDCollectionViewCell.m; sourceTree = "<group>"; };
+		C5CDE5701F4EAF8E00EC3142 /* FlowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlowManager.h; path = Controller/FlowManager.h; sourceTree = "<group>"; };
+		C5CDE5711F4EAF8E00EC3142 /* FlowManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlowManager.m; path = Controller/FlowManager.m; sourceTree = "<group>"; };
+		C5FB96A61F4B346800C023FA /* ParkSpots_TPE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkSpots_TPE.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5FB96AA1F4B346800C023FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C5FB96AC1F4B346800C023FA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C5FB96AD1F4B346800C023FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C5FB96B31F4B346800C023FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C5FB96B51F4B346800C023FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C5FB96BA1F4B346800C023FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C5FB96A31F4B346800C023FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9286D6E050FD777934A78784 /* libPods-ParkSpots_TPE.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		30E4A5C56DD02864E5147CC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88F0A94D566DD6D83AF821FC /* libPods-ParkSpots_TPE.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2C3ECEDE85422623C2801F6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				777AA64AFDC289288A01EB52 /* Pods-ParkSpots_TPE.debug.xcconfig */,
+				8CA546CE18AC23C22AA9B552 /* Pods-ParkSpots_TPE.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C55F2E111F4BCCDB009E3AB5 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C578DE361F4D16B400DC8F0B /* dataTPEService.h */,
+				C578DE371F4D16B400DC8F0B /* dataTPEService.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		C55F2E121F4BCCE7009E3AB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C578DE391F4D4E9300DC8F0B /* ParkSpotItem.h */,
+				C578DE3A1F4D4E9300DC8F0B /* ParkSpotItem.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C55F2E131F4BCCFE009E3AB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C516431E1F4D88B5001293AD /* ParkSpotTableViewCell.h */,
+				C516431F1F4D88B5001293AD /* ParkSpotTableViewCell.m */,
+				C5CDE56D1F4E74F400EC3142 /* ParkSpotDCollectionViewCell.h */,
+				C5CDE56E1F4E74F400EC3142 /* ParkSpotDCollectionViewCell.m */,
+				C5A374521F4EBEDC0039D380 /* PSDImageVC.h */,
+				C5A374531F4EBEDC0039D380 /* PSDImageVC.m */,
+				C5A374541F4EBEDC0039D380 /* PSDImageVC.xib */,
+				C5A374571F4ECA950039D380 /* PSDInfoVC.h */,
+				C5A374581F4ECA950039D380 /* PSDInfoVC.m */,
+				C5A374591F4ECA950039D380 /* PSDInfoVC.xib */,
+				C5A3745F1F4ECDD20039D380 /* PSDIntroVC.h */,
+				C5A374601F4ECDD20039D380 /* PSDIntroVC.m */,
+				C5A374611F4ECDD20039D380 /* PSDIntroVC.xib */,
+				C5A374641F4ECDF60039D380 /* PSDRelatedVC.h */,
+				C5A374651F4ECDF60039D380 /* PSDRelatedVC.m */,
+				C5A374661F4ECDF60039D380 /* PSDRelatedVC.xib */,
+				C5A374691F4EE1A30039D380 /* PSDRcmdCollectionViewCell.h */,
+				C5A3746A1F4EE1A30039D380 /* PSDRcmdCollectionViewCell.m */,
+				C5A3746B1F4EE1A30039D380 /* PSDRcmdCollectionViewCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C55F2E141F4BCD07009E3AB5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C55F2E151F4BCD1F009E3AB5 /* ParkSpotListVC.h */,
+				C55F2E161F4BCD1F009E3AB5 /* ParkSpotListVC.m */,
+				C52DB2C91F4DF71E00BE58E3 /* ParkSpotDetailVC.h */,
+				C52DB2CA1F4DF71E00BE58E3 /* ParkSpotDetailVC.m */,
+				C5CDE5701F4EAF8E00EC3142 /* FlowManager.h */,
+				C5CDE5711F4EAF8E00EC3142 /* FlowManager.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C577B4261F4C8C760031D55F /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C577B4271F4C8C9D0031D55F /* Utilities.h */,
+				C577B4281F4C8C9D0031D55F /* Utilities.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		C5FB969D1F4B346800C023FA = {
+			isa = PBXGroup;
+			children = (
+				C5FB96A81F4B346800C023FA /* ParkSpots_TPE */,
+				C5FB96A71F4B346800C023FA /* Products */,
+				C2C3ECEDE85422623C2801F6 /* Pods */,
+				30E4A5C56DD02864E5147CC0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C5FB96A71F4B346800C023FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5FB96A61F4B346800C023FA /* ParkSpots_TPE.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C5FB96A81F4B346800C023FA /* ParkSpots_TPE */ = {
+			isa = PBXGroup;
+			children = (
+				C577B4261F4C8C760031D55F /* Utility */,
+				C55F2E111F4BCCDB009E3AB5 /* API */,
+				C55F2E141F4BCD07009E3AB5 /* Controller */,
+				C55F2E131F4BCCFE009E3AB5 /* View */,
+				C55F2E121F4BCCE7009E3AB5 /* Model */,
+				C5FB96AC1F4B346800C023FA /* AppDelegate.h */,
+				C5FB96AD1F4B346800C023FA /* AppDelegate.m */,
+				C5FB96B21F4B346800C023FA /* Main.storyboard */,
+				C5536C9A1F4F512300B5BB6C /* LaunchScreen.storyboard */,
+				C5FB96B51F4B346800C023FA /* Assets.xcassets */,
+				C5FB96BA1F4B346800C023FA /* Info.plist */,
+				C5FB96A91F4B346800C023FA /* Supporting Files */,
+				C5284EF71F4C7D9100468C08 /* Definitions.h */,
+			);
+			path = ParkSpots_TPE;
+			sourceTree = "<group>";
+		};
+		C5FB96A91F4B346800C023FA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5FB96AA1F4B346800C023FA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C5FB96A51F4B346800C023FA /* ParkSpots_TPE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5FB96BD1F4B346800C023FA /* Build configuration list for PBXNativeTarget "ParkSpots_TPE" */;
+			buildPhases = (
+				59D94F1BB3F1B53F905EBA6A /* [CP] Check Pods Manifest.lock */,
+				C5FB96A21F4B346800C023FA /* Sources */,
+				C5FB96A31F4B346800C023FA /* Frameworks */,
+				C5FB96A41F4B346800C023FA /* Resources */,
+				2E8F67C59052A2A028A37225 /* [CP] Embed Pods Frameworks */,
+				B3CF2A5501708F425CFB3F14 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ParkSpots_TPE;
+			productName = ParkSpots_TPE;
+			productReference = C5FB96A61F4B346800C023FA /* ParkSpots_TPE.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C5FB969E1F4B346800C023FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Taiwan Mobile Co.,";
+				TargetAttributes = {
+					C5FB96A51F4B346800C023FA = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 796XALWJ7W;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = C5FB96A11F4B346800C023FA /* Build configuration list for PBXProject "ParkSpots_TPE" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C5FB969D1F4B346800C023FA;
+			productRefGroup = C5FB96A71F4B346800C023FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C5FB96A51F4B346800C023FA /* ParkSpots_TPE */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C5FB96A41F4B346800C023FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5FB96B61F4B346800C023FA /* Assets.xcassets in Resources */,
+				C5536C9C1F4F512300B5BB6C /* LaunchScreen.storyboard in Resources */,
+				C5A3746D1F4EE1A30039D380 /* PSDRcmdCollectionViewCell.xib in Resources */,
+				C5A374561F4EBEDC0039D380 /* PSDImageVC.xib in Resources */,
+				C5FB96B41F4B346800C023FA /* Main.storyboard in Resources */,
+				C5A374681F4ECDF60039D380 /* PSDRelatedVC.xib in Resources */,
+				C5A3745B1F4ECA950039D380 /* PSDInfoVC.xib in Resources */,
+				C5A374631F4ECDD20039D380 /* PSDIntroVC.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E8F67C59052A2A028A37225 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParkSpots_TPE/Pods-ParkSpots_TPE-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59D94F1BB3F1B53F905EBA6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ParkSpots_TPE-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3CF2A5501708F425CFB3F14 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParkSpots_TPE/Pods-ParkSpots_TPE-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C5FB96A21F4B346800C023FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5A3745A1F4ECA950039D380 /* PSDInfoVC.m in Sources */,
+				C578DE3B1F4D4E9300DC8F0B /* ParkSpotItem.m in Sources */,
+				C5A3746C1F4EE1A30039D380 /* PSDRcmdCollectionViewCell.m in Sources */,
+				C55F2E171F4BCD1F009E3AB5 /* ParkSpotListVC.m in Sources */,
+				C5FB96AE1F4B346800C023FA /* AppDelegate.m in Sources */,
+				C577B4291F4C8C9D0031D55F /* Utilities.m in Sources */,
+				C5CDE5721F4EAF8E00EC3142 /* FlowManager.m in Sources */,
+				C5FB96AB1F4B346800C023FA /* main.m in Sources */,
+				C5A374551F4EBEDC0039D380 /* PSDImageVC.m in Sources */,
+				C5A374621F4ECDD20039D380 /* PSDIntroVC.m in Sources */,
+				C52DB2CB1F4DF71E00BE58E3 /* ParkSpotDetailVC.m in Sources */,
+				C51643201F4D88B5001293AD /* ParkSpotTableViewCell.m in Sources */,
+				C578DE381F4D16B400DC8F0B /* dataTPEService.m in Sources */,
+				C5A374671F4ECDF60039D380 /* PSDRelatedVC.m in Sources */,
+				C5CDE56F1F4E74F400EC3142 /* ParkSpotDCollectionViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C5536C9A1F4F512300B5BB6C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5536C9B1F4F512300B5BB6C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C5FB96B21F4B346800C023FA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5FB96B31F4B346800C023FA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C5FB96BB1F4B346800C023FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C5FB96BC1F4B346800C023FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C5FB96BE1F4B346800C023FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 777AA64AFDC289288A01EB52 /* Pods-ParkSpots_TPE.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kenny Lin (S27666R2W3)";
+				DEVELOPMENT_TEAM = 796XALWJ7W;
+				INFOPLIST_FILE = ParkSpots_TPE/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.taiwanmobile.myVideo3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bde45735-6992-4198-8968-3defff6ac3d9";
+				PROVISIONING_PROFILE_SPECIFIER = "myVideo3 Development";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C5FB96BF1F4B346800C023FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CA546CE18AC23C22AA9B552 /* Pods-ParkSpots_TPE.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kenny Lin (S27666R2W3)";
+				DEVELOPMENT_TEAM = 796XALWJ7W;
+				INFOPLIST_FILE = ParkSpots_TPE/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.taiwanmobile.myVideo3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bde45735-6992-4198-8968-3defff6ac3d9";
+				PROVISIONING_PROFILE_SPECIFIER = "myVideo3 Development";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C5FB96A11F4B346800C023FA /* Build configuration list for PBXProject "ParkSpots_TPE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5FB96BB1F4B346800C023FA /* Debug */,
+				C5FB96BC1F4B346800C023FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5FB96BD1F4B346800C023FA /* Build configuration list for PBXNativeTarget "ParkSpots_TPE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5FB96BE1F4B346800C023FA /* Debug */,
+				C5FB96BF1F4B346800C023FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C5FB969E1F4B346800C023FA /* Project object */;
+}
