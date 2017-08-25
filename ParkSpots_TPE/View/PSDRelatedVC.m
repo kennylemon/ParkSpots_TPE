@@ -69,6 +69,16 @@
 
     return cell;
 }
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    
+    if (self.relatedItems.count>indexPath.row) {
+        
+        if ([self.delegate respondsToSelector:@selector(onSelectedParkSpot:)]) {
+            [self.delegate onSelectedParkSpot:[self.relatedItems objectAtIndex:indexPath.row]];
+        }
+    }
+}
 /*
 #pragma mark - Navigation
 

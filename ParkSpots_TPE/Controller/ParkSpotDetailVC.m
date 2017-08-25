@@ -27,7 +27,7 @@ typedef NS_ENUM(NSInteger, PSDetailCellType) {
     PSDTotalCellType
 };
 
-@interface ParkSpotDetailVC () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
+@interface ParkSpotDetailVC () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, PSDRelatedDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableview;
 @property (strong, nonatomic) ParkSpotItem* PSItem;
@@ -42,17 +42,16 @@ typedef NS_ENUM(NSInteger, PSDetailCellType) {
     self.tableview.delegate = nil;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.parkItemInfoVCList = [[NSMutableArray alloc] init];
-    
+- (void)updateCurrentSelectedParkSpotItem {
     for ( ParkSpotItem* item in self.parkSpotList ) {
         if ([item.spotName isEqualToString:self.currentSelectedSpotName]) {
             self.PSItem = [item copy];
             break;
         }
     }
+}
+
+- (void)createParkSpotDetailUI {
     
     for (int idx = 0; idx< PSDTotalCellType; idx++) {
         
@@ -71,7 +70,7 @@ typedef NS_ENUM(NSInteger, PSDetailCellType) {
             } else if (idx==PSDCellIntro) {
                 vc = [[PSDIntroVC alloc] initWithItro:self.PSItem.introduction];
             } else if (idx==PSDCellRelated) {
-
+                
                 NSMutableArray* filterArray = [[NSMutableArray alloc] init];
                 for (ParkSpotItem* item in self.parkSpotList) {
                     if (![item.spotName isEqualToString:self.PSItem.spotName]) {
@@ -80,6 +79,7 @@ typedef NS_ENUM(NSInteger, PSDetailCellType) {
                 }
                 if ( filterArray.count > 0 ) {
                     vc = [[PSDRelatedVC alloc] initWithRelated:self.PSItem.spotName relatedItems:filterArray];
+                    ((PSDRelatedVC*)vc).delegate = self;
                 }
             }
             
@@ -89,7 +89,15 @@ typedef NS_ENUM(NSInteger, PSDetailCellType) {
             
         }
     }
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
+    self.parkItemInfoVCList = [[NSMutableArray alloc] init];
+    [self updateCurrentSelectedParkSpotItem];
+    [self createParkSpotDetailUI];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -144,4 +152,26 @@ typedef NS_ENUM(NSInteger, PSDetailCellType) {
     [[FlowManager instance] popViewController];
 }
 
+
+#pragma mark - PSDRelatedDelegate
+- (void)onSelectedParkSpot:(ParkSpotItem*)selectedPSItem {
+    
+    if (selectedPSItem) {
+        
+        dispatch_async( dispatch_get_global_queue(0, 0), ^{
+            NSLog(@"NSThread Main = %d", [NSThread isMainThread]);
+            
+            self.currentSelectedSpotName = selectedPSItem.spotName;
+            [self updateCurrentSelectedParkSpotItem];
+            if (self.parkItemInfoVCList.count) {
+                [self.parkItemInfoVCList removeAllObjects];
+            }
+            [self createParkSpotDetailUI];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableview reloadData];
+            });
+        });
+    }
+}
 @end
