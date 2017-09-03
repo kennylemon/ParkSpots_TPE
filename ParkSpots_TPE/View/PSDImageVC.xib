@@ -19,12 +19,17 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="175"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xsY-Fx-XK5">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xsY-Fx-XK5">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="175"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="xsY-Fx-XK5" secondAttribute="bottom" id="Bsl-xn-Die"/>
+                <constraint firstAttribute="trailing" secondItem="xsY-Fx-XK5" secondAttribute="trailing" id="E98-yC-XGr"/>
+                <constraint firstItem="xsY-Fx-XK5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Jh4-IS-5X2"/>
+                <constraint firstItem="xsY-Fx-XK5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Ze6-PI-cnJ"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="26.5" y="52.5"/>
         </view>

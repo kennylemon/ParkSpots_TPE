@@ -15,6 +15,10 @@
 		C577B4291F4C8C9D0031D55F /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C577B4281F4C8C9D0031D55F /* Utilities.m */; };
 		C578DE381F4D16B400DC8F0B /* dataTPEService.m in Sources */ = {isa = PBXBuildFile; fileRef = C578DE371F4D16B400DC8F0B /* dataTPEService.m */; };
 		C578DE3B1F4D4E9300DC8F0B /* ParkSpotItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C578DE3A1F4D4E9300DC8F0B /* ParkSpotItem.m */; };
+		C5906AA11F56BB48002F6770 /* PSDImgTableviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5906AA01F56BB48002F6770 /* PSDImgTableviewCell.m */; };
+		C5906AA41F56BFAB002F6770 /* PSDInfoTableviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5906AA31F56BFAB002F6770 /* PSDInfoTableviewCell.m */; };
+		C5906AA71F56BFC0002F6770 /* PSDIntroTableviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5906AA61F56BFC0002F6770 /* PSDIntroTableviewCell.m */; };
+		C5906AAA1F56BFE9002F6770 /* PSDRelateTableviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5906AA91F56BFE9002F6770 /* PSDRelateTableviewCell.m */; };
 		C5A374551F4EBEDC0039D380 /* PSDImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A374531F4EBEDC0039D380 /* PSDImageVC.m */; };
 		C5A374561F4EBEDC0039D380 /* PSDImageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A374541F4EBEDC0039D380 /* PSDImageVC.xib */; };
 		C5A3745A1F4ECA950039D380 /* PSDInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A374581F4ECA950039D380 /* PSDInfoVC.m */; };
@@ -51,6 +55,14 @@
 		C578DE371F4D16B400DC8F0B /* dataTPEService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = dataTPEService.m; path = API/dataTPEService.m; sourceTree = "<group>"; };
 		C578DE391F4D4E9300DC8F0B /* ParkSpotItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParkSpotItem.h; path = Model/ParkSpotItem.h; sourceTree = "<group>"; };
 		C578DE3A1F4D4E9300DC8F0B /* ParkSpotItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParkSpotItem.m; path = Model/ParkSpotItem.m; sourceTree = "<group>"; };
+		C5906A9F1F56BB48002F6770 /* PSDImgTableviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSDImgTableviewCell.h; path = View/PSDImgTableviewCell.h; sourceTree = "<group>"; };
+		C5906AA01F56BB48002F6770 /* PSDImgTableviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSDImgTableviewCell.m; path = View/PSDImgTableviewCell.m; sourceTree = "<group>"; };
+		C5906AA21F56BFAB002F6770 /* PSDInfoTableviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSDInfoTableviewCell.h; path = View/PSDInfoTableviewCell.h; sourceTree = "<group>"; };
+		C5906AA31F56BFAB002F6770 /* PSDInfoTableviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSDInfoTableviewCell.m; path = View/PSDInfoTableviewCell.m; sourceTree = "<group>"; };
+		C5906AA51F56BFC0002F6770 /* PSDIntroTableviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSDIntroTableviewCell.h; path = View/PSDIntroTableviewCell.h; sourceTree = "<group>"; };
+		C5906AA61F56BFC0002F6770 /* PSDIntroTableviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSDIntroTableviewCell.m; path = View/PSDIntroTableviewCell.m; sourceTree = "<group>"; };
+		C5906AA81F56BFE9002F6770 /* PSDRelateTableviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSDRelateTableviewCell.h; path = View/PSDRelateTableviewCell.h; sourceTree = "<group>"; };
+		C5906AA91F56BFE9002F6770 /* PSDRelateTableviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSDRelateTableviewCell.m; path = View/PSDRelateTableviewCell.m; sourceTree = "<group>"; };
 		C5A374521F4EBEDC0039D380 /* PSDImageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSDImageVC.h; path = View/PSDImageVC.h; sourceTree = "<group>"; };
 		C5A374531F4EBEDC0039D380 /* PSDImageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSDImageVC.m; path = View/PSDImageVC.m; sourceTree = "<group>"; };
 		C5A374541F4EBEDC0039D380 /* PSDImageVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSDImageVC.xib; path = View/PSDImageVC.xib; sourceTree = "<group>"; };
@@ -148,6 +160,14 @@
 				C5A374691F4EE1A30039D380 /* PSDRcmdCollectionViewCell.h */,
 				C5A3746A1F4EE1A30039D380 /* PSDRcmdCollectionViewCell.m */,
 				C5A3746B1F4EE1A30039D380 /* PSDRcmdCollectionViewCell.xib */,
+				C5906A9F1F56BB48002F6770 /* PSDImgTableviewCell.h */,
+				C5906AA01F56BB48002F6770 /* PSDImgTableviewCell.m */,
+				C5906AA21F56BFAB002F6770 /* PSDInfoTableviewCell.h */,
+				C5906AA31F56BFAB002F6770 /* PSDInfoTableviewCell.m */,
+				C5906AA51F56BFC0002F6770 /* PSDIntroTableviewCell.h */,
+				C5906AA61F56BFC0002F6770 /* PSDIntroTableviewCell.m */,
+				C5906AA81F56BFE9002F6770 /* PSDRelateTableviewCell.h */,
+				C5906AA91F56BFE9002F6770 /* PSDRelateTableviewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -355,16 +375,20 @@
 				C578DE3B1F4D4E9300DC8F0B /* ParkSpotItem.m in Sources */,
 				C5A3746C1F4EE1A30039D380 /* PSDRcmdCollectionViewCell.m in Sources */,
 				C55F2E171F4BCD1F009E3AB5 /* ParkSpotListVC.m in Sources */,
+				C5906AAA1F56BFE9002F6770 /* PSDRelateTableviewCell.m in Sources */,
 				C5FB96AE1F4B346800C023FA /* AppDelegate.m in Sources */,
 				C577B4291F4C8C9D0031D55F /* Utilities.m in Sources */,
 				C5CDE5721F4EAF8E00EC3142 /* FlowManager.m in Sources */,
+				C5906AA11F56BB48002F6770 /* PSDImgTableviewCell.m in Sources */,
 				C5FB96AB1F4B346800C023FA /* main.m in Sources */,
 				C5A374551F4EBEDC0039D380 /* PSDImageVC.m in Sources */,
 				C5A374621F4ECDD20039D380 /* PSDIntroVC.m in Sources */,
 				C52DB2CB1F4DF71E00BE58E3 /* ParkSpotDetailVC.m in Sources */,
+				C5906AA41F56BFAB002F6770 /* PSDInfoTableviewCell.m in Sources */,
 				C51643201F4D88B5001293AD /* ParkSpotTableViewCell.m in Sources */,
 				C578DE381F4D16B400DC8F0B /* dataTPEService.m in Sources */,
 				C5A374671F4ECDF60039D380 /* PSDRelatedVC.m in Sources */,
+				C5906AA71F56BFC0002F6770 /* PSDIntroTableviewCell.m in Sources */,
 				C5CDE56F1F4E74F400EC3142 /* ParkSpotDCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

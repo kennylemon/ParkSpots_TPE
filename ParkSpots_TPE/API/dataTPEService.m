@@ -39,6 +39,7 @@
     self = [super init];
     
     afSessionMngr = [AFHTTPSessionManager manager];
+    [afSessionMngr.requestSerializer setTimeoutInterval:10];
     ((AFJSONResponseSerializer *)afSessionMngr.responseSerializer).removesKeysWithNullValues = YES;
 
     return self;
