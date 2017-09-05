@@ -18,7 +18,6 @@
 @interface PSDRelateTableviewCell : UITableViewCell
 
 @property (nonatomic, weak) id<PSDRelatedDelegate> delegate;
-@property (strong, nonatomic) NSArray<ParkSpotItem*>* relatedItems;
+@property (nonatomic, strong) NSArray<ParkSpotItem*>* relatedItems;
 
-- (void)reloadData;
 @end

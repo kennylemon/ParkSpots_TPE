@@ -14,6 +14,8 @@
 
 + (NSString*)apiUrlWithRid:(NSString*)rid;
 
-+ (NSString*)apiUrlWithRid:(NSString*)rid withLimt:(NSString*)limit withOffset:(NSUInteger)offset;
++ (NSString*)apiUrlWithRid:(NSString*)rid withQry:(NSString*)query;
+    
++ (NSString*)apiUrlWithRid:(NSString*)rid withLimt:(NSUInteger)limit withOffset:(NSUInteger)offset;
 
 @end

@@ -14,20 +14,26 @@ static NSString * const PST_SPOT_RID = @"bf073841-c734-49bf-a97f-3757a6013812";
 
 // API related
 static NSString * const PST_API_URL = @"http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire";
-static NSString * const PST_API_LIMIT = @"100";
+
 static NSString * const PST_QRY_RID = @"&rid=%@";
 static NSString * const PST_QRY_QSTATEMENT = @"&q=%@";
 static NSString * const PST_QRY_LIMIT = @"&limit=%@";
 static NSString * const PST_QRY_OFFSET = @"&offset=%@";
 
-// trigger lazy loading before section
-static int const TLLBS_COUNT = 10;
+// session manager timeout interval setting
+static int const API_TIMEOUT = 10;
 
-static NSString * const SHOW_PARKSPOTDETAILVC = @"ParkSpotDetail";
+// UI Wording
+static NSString * const CONFIRM = @"Confirm";
+static NSString * const API_FAIL = @"Data Taipei API encountered an error, Please try again later!";
+
+// trigger lazy loading before section
+static int const TLLBS_COUNT = 5;
+static int const PST_API_LIMIT = 50;
 
 // park spot detail cell type reuse id
 static NSString * const PSD_RCMD_CELL = @"PSDRcmdCell";
 
 
-
+static NSString * const DEF_IMG = @"Image";
 #endif /* Definitions_h */

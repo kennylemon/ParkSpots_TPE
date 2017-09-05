@@ -19,10 +19,19 @@
     return result;
 }
 
-+ (NSString*)apiUrlWithRid:(NSString*)rid withLimt:(NSString*)limit withOffset:(NSUInteger)offset {
++ (NSString*)apiUrlWithRid:(NSString*)rid withQry:(NSString*)query{
     
     NSString* qry = [NSString stringWithFormat:PST_QRY_RID, rid];
-    qry = [qry stringByAppendingFormat:PST_QRY_LIMIT, limit];
+    qry = [qry stringByAppendingFormat:PST_QRY_QSTATEMENT, query];
+    NSString* result = [NSString stringWithFormat:@"%@%@", PST_API_URL, qry];
+    
+    return result;
+}
+
++ (NSString*)apiUrlWithRid:(NSString*)rid withLimt:(NSUInteger)limit withOffset:(NSUInteger)offset {
+    
+    NSString* qry = [NSString stringWithFormat:PST_QRY_RID, rid];
+    qry = [qry stringByAppendingFormat:PST_QRY_LIMIT, [NSString stringWithFormat:@"%li", limit]];
     qry = [qry stringByAppendingFormat:PST_QRY_OFFSET, [NSString stringWithFormat:@"%li", offset]];
     NSString* result = [NSString stringWithFormat:@"%@%@", PST_API_URL, qry];
     

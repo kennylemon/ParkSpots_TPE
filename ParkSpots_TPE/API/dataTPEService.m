@@ -39,7 +39,7 @@
     self = [super init];
     
     afSessionMngr = [AFHTTPSessionManager manager];
-    [afSessionMngr.requestSerializer setTimeoutInterval:10];
+    [afSessionMngr.requestSerializer setTimeoutInterval:API_TIMEOUT];
     ((AFJSONResponseSerializer *)afSessionMngr.responseSerializer).removesKeysWithNullValues = YES;
 
     return self;
@@ -80,45 +80,54 @@
     
     NSString* api = [Utilities apiUrlWithRid:PST_SPOT_RID withLimt:PST_API_LIMIT withOffset:offset];
     
-    NSLog(@"api = %@", api);
-    [self getData:api success:^(NSUInteger count, NSUInteger limit, NSUInteger offset, NSArray *itemList) {
+    // Park Spot with no image
+    /*
+    NSString* api = [Utilities apiUrlWithRid:PST_SPOT_RID withQry:@"忠誠公園"];
+    NSCharacterSet *set = [NSCharacterSet URLQueryAllowedCharacterSet];
+    api = [api stringByAddingPercentEncodingWithAllowedCharacters:set];
+    */
+    @synchronized (self) {
+        NSLog(@"api = %@", api);
+        [self getData:api success:^(NSUInteger count, NSUInteger limit, NSUInteger offset, NSArray *itemList) {
 
-        // API 回傳的資料就是依照 ParkName 排序
-        NSArray *parkSpotList = [ParkSpotItem initWithArray:itemList];
-        NSMutableDictionary<NSString*, NSArray*> *dicParksSpots = [[NSMutableDictionary alloc] init];
-        
-        ParkSpotItem* spotItem = [parkSpotList firstObject];
-        NSString* lastSpotName;
-        if (spotItem) {
-            NSMutableArray<ParkSpotItem*> *parkSpots = [[NSMutableArray alloc] init];
-            lastSpotName = spotItem.parkName;
-            for (ParkSpotItem* item in parkSpotList) {
-                
-                if ([item.parkName isEqualToString:lastSpotName]) {
-                    [parkSpots addObject:item];
+            
+            // API 回傳的資料就是依照 ParkName 排序
+            NSArray *parkSpotList = [ParkSpotItem initWithArray:itemList];
+            NSMutableDictionary<NSString*, NSArray*> *dicParksSpots = [[NSMutableDictionary alloc] init];
+            
+            ParkSpotItem* spotItem = [parkSpotList firstObject];
+            NSString* lastSpotName;
+            if (spotItem) {
+                NSMutableArray<ParkSpotItem*> *parkSpots = [[NSMutableArray alloc] init];
+                lastSpotName = spotItem.parkName;
+                for (ParkSpotItem* item in parkSpotList) {
                     
-                    if (item == [parkSpotList lastObject]) {
+                    if ([item.parkName isEqualToString:lastSpotName]) {
+                        [parkSpots addObject:item];
+                        
+                        if (item == [parkSpotList lastObject]) {
+                            NSArray<ParkSpotItem*>* parkSpotsResult = [[NSArray alloc] initWithArray:parkSpots copyItems:YES];
+                            [dicParksSpots setObject:parkSpotsResult forKey:lastSpotName];
+                        }
+                    } else {
                         NSArray<ParkSpotItem*>* parkSpotsResult = [[NSArray alloc] initWithArray:parkSpots copyItems:YES];
                         [dicParksSpots setObject:parkSpotsResult forKey:lastSpotName];
+                        
+                        [parkSpots removeAllObjects];
+                        // 新的 parkname 對應重新建立 parkspotlist
+                        [parkSpots addObject:item];
+                        lastSpotName = item.parkName;
                     }
-                } else {
-                    NSArray<ParkSpotItem*>* parkSpotsResult = [[NSArray alloc] initWithArray:parkSpots copyItems:YES];
-                    [dicParksSpots setObject:parkSpotsResult forKey:lastSpotName];
-                    
-                    [parkSpots removeAllObjects];
-                    // 新的 parkname 對應重新建立 parkspotlist
-                    [parkSpots addObject:item];
-                    lastSpotName = item.parkName;
                 }
             }
-        }
 
-        dispatch_async(dispatch_get_main_queue(), ^{
-            successHandler(count, limit, offset, dicParksSpots);
-        });
-    } fail:^(NSError *error) {
-        failHandler(error);
-    }];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                successHandler(count, limit, offset, dicParksSpots);
+            });
+        } fail:^(NSError *error) {
+            failHandler(error);
+        }];
+    }
 }
 
 @end

@@ -14,7 +14,7 @@
 
 @interface PSDRelateTableviewCell () <UICollectionViewDataSource, UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionview;
-
+@property (strong, nonatomic) UIImage *defaultImg;
 @end
 
 @implementation PSDRelateTableviewCell
@@ -30,11 +30,17 @@
     // Configure the view for the selected state
 }
 
-- (void)reloadData {
+- (void)setRelatedItems:(NSArray*)array {
+    _relatedItems = [array copy];
     [self.collectionview reloadData];
 }
 
+- (void)layoutSubviews {
+    self.defaultImg = [UIImage imageNamed:DEF_IMG];
+}
+
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    
     return 1;
 }
 
@@ -49,9 +55,9 @@
     
     if (self.relatedItems.count>indexPath.row) {
         ParkSpotItem* item = [self.relatedItems objectAtIndex:indexPath.row];
-        if (item) {
+        if ( item ) {
             cell.spotName.text = item.spotName;
-            [cell.spotImg sd_setImageWithURL:[NSURL URLWithString:item.imgUrl]];
+            [cell.spotImg sd_setImageWithURL:[NSURL URLWithString:item.imgUrl] placeholderImage:self.defaultImg];
         }
     }
     
@@ -60,7 +66,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
-    if (self.relatedItems.count>indexPath.row) {
+    if ( self.relatedItems.count > indexPath.row ) {
         
         if ([self.delegate respondsToSelector:@selector(onSelectedParkSpot:)]) {
             [self.delegate onSelectedParkSpot:[self.relatedItems objectAtIndex:indexPath.row]];

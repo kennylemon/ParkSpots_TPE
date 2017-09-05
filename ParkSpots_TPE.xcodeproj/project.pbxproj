@@ -19,16 +19,7 @@
 		C5906AA41F56BFAB002F6770 /* PSDInfoTableviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5906AA31F56BFAB002F6770 /* PSDInfoTableviewCell.m */; };
 		C5906AA71F56BFC0002F6770 /* PSDIntroTableviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5906AA61F56BFC0002F6770 /* PSDIntroTableviewCell.m */; };
 		C5906AAA1F56BFE9002F6770 /* PSDRelateTableviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5906AA91F56BFE9002F6770 /* PSDRelateTableviewCell.m */; };
-		C5A374551F4EBEDC0039D380 /* PSDImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A374531F4EBEDC0039D380 /* PSDImageVC.m */; };
-		C5A374561F4EBEDC0039D380 /* PSDImageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A374541F4EBEDC0039D380 /* PSDImageVC.xib */; };
-		C5A3745A1F4ECA950039D380 /* PSDInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A374581F4ECA950039D380 /* PSDInfoVC.m */; };
-		C5A3745B1F4ECA950039D380 /* PSDInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A374591F4ECA950039D380 /* PSDInfoVC.xib */; };
-		C5A374621F4ECDD20039D380 /* PSDIntroVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A374601F4ECDD20039D380 /* PSDIntroVC.m */; };
-		C5A374631F4ECDD20039D380 /* PSDIntroVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A374611F4ECDD20039D380 /* PSDIntroVC.xib */; };
-		C5A374671F4ECDF60039D380 /* PSDRelatedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A374651F4ECDF60039D380 /* PSDRelatedVC.m */; };
-		C5A374681F4ECDF60039D380 /* PSDRelatedVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A374661F4ECDF60039D380 /* PSDRelatedVC.xib */; };
 		C5A3746C1F4EE1A30039D380 /* PSDRcmdCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A3746A1F4EE1A30039D380 /* PSDRcmdCollectionViewCell.m */; };
-		C5A3746D1F4EE1A30039D380 /* PSDRcmdCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A3746B1F4EE1A30039D380 /* PSDRcmdCollectionViewCell.xib */; };
 		C5CDE56F1F4E74F400EC3142 /* ParkSpotDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CDE56E1F4E74F400EC3142 /* ParkSpotDCollectionViewCell.m */; };
 		C5CDE5721F4EAF8E00EC3142 /* FlowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CDE5711F4EAF8E00EC3142 /* FlowManager.m */; };
 		C5FB96AB1F4B346800C023FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FB96AA1F4B346800C023FA /* main.m */; };
@@ -63,21 +54,8 @@
 		C5906AA61F56BFC0002F6770 /* PSDIntroTableviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSDIntroTableviewCell.m; path = View/PSDIntroTableviewCell.m; sourceTree = "<group>"; };
 		C5906AA81F56BFE9002F6770 /* PSDRelateTableviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSDRelateTableviewCell.h; path = View/PSDRelateTableviewCell.h; sourceTree = "<group>"; };
 		C5906AA91F56BFE9002F6770 /* PSDRelateTableviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSDRelateTableviewCell.m; path = View/PSDRelateTableviewCell.m; sourceTree = "<group>"; };
-		C5A374521F4EBEDC0039D380 /* PSDImageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSDImageVC.h; path = View/PSDImageVC.h; sourceTree = "<group>"; };
-		C5A374531F4EBEDC0039D380 /* PSDImageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSDImageVC.m; path = View/PSDImageVC.m; sourceTree = "<group>"; };
-		C5A374541F4EBEDC0039D380 /* PSDImageVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSDImageVC.xib; path = View/PSDImageVC.xib; sourceTree = "<group>"; };
-		C5A374571F4ECA950039D380 /* PSDInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSDInfoVC.h; path = View/PSDInfoVC.h; sourceTree = "<group>"; };
-		C5A374581F4ECA950039D380 /* PSDInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSDInfoVC.m; path = View/PSDInfoVC.m; sourceTree = "<group>"; };
-		C5A374591F4ECA950039D380 /* PSDInfoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSDInfoVC.xib; path = View/PSDInfoVC.xib; sourceTree = "<group>"; };
-		C5A3745F1F4ECDD20039D380 /* PSDIntroVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSDIntroVC.h; path = View/PSDIntroVC.h; sourceTree = "<group>"; };
-		C5A374601F4ECDD20039D380 /* PSDIntroVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSDIntroVC.m; path = View/PSDIntroVC.m; sourceTree = "<group>"; };
-		C5A374611F4ECDD20039D380 /* PSDIntroVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSDIntroVC.xib; path = View/PSDIntroVC.xib; sourceTree = "<group>"; };
-		C5A374641F4ECDF60039D380 /* PSDRelatedVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSDRelatedVC.h; path = View/PSDRelatedVC.h; sourceTree = "<group>"; };
-		C5A374651F4ECDF60039D380 /* PSDRelatedVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSDRelatedVC.m; path = View/PSDRelatedVC.m; sourceTree = "<group>"; };
-		C5A374661F4ECDF60039D380 /* PSDRelatedVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSDRelatedVC.xib; path = View/PSDRelatedVC.xib; sourceTree = "<group>"; };
 		C5A374691F4EE1A30039D380 /* PSDRcmdCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSDRcmdCollectionViewCell.h; path = View/PSDRcmdCollectionViewCell.h; sourceTree = "<group>"; };
 		C5A3746A1F4EE1A30039D380 /* PSDRcmdCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSDRcmdCollectionViewCell.m; path = View/PSDRcmdCollectionViewCell.m; sourceTree = "<group>"; };
-		C5A3746B1F4EE1A30039D380 /* PSDRcmdCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PSDRcmdCollectionViewCell.xib; path = View/PSDRcmdCollectionViewCell.xib; sourceTree = "<group>"; };
 		C5CDE56D1F4E74F400EC3142 /* ParkSpotDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParkSpotDCollectionViewCell.h; path = View/ParkSpotDCollectionViewCell.h; sourceTree = "<group>"; };
 		C5CDE56E1F4E74F400EC3142 /* ParkSpotDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParkSpotDCollectionViewCell.m; path = View/ParkSpotDCollectionViewCell.m; sourceTree = "<group>"; };
 		C5CDE5701F4EAF8E00EC3142 /* FlowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlowManager.h; path = Controller/FlowManager.h; sourceTree = "<group>"; };
@@ -145,21 +123,8 @@
 				C516431F1F4D88B5001293AD /* ParkSpotTableViewCell.m */,
 				C5CDE56D1F4E74F400EC3142 /* ParkSpotDCollectionViewCell.h */,
 				C5CDE56E1F4E74F400EC3142 /* ParkSpotDCollectionViewCell.m */,
-				C5A374521F4EBEDC0039D380 /* PSDImageVC.h */,
-				C5A374531F4EBEDC0039D380 /* PSDImageVC.m */,
-				C5A374541F4EBEDC0039D380 /* PSDImageVC.xib */,
-				C5A374571F4ECA950039D380 /* PSDInfoVC.h */,
-				C5A374581F4ECA950039D380 /* PSDInfoVC.m */,
-				C5A374591F4ECA950039D380 /* PSDInfoVC.xib */,
-				C5A3745F1F4ECDD20039D380 /* PSDIntroVC.h */,
-				C5A374601F4ECDD20039D380 /* PSDIntroVC.m */,
-				C5A374611F4ECDD20039D380 /* PSDIntroVC.xib */,
-				C5A374641F4ECDF60039D380 /* PSDRelatedVC.h */,
-				C5A374651F4ECDF60039D380 /* PSDRelatedVC.m */,
-				C5A374661F4ECDF60039D380 /* PSDRelatedVC.xib */,
 				C5A374691F4EE1A30039D380 /* PSDRcmdCollectionViewCell.h */,
 				C5A3746A1F4EE1A30039D380 /* PSDRcmdCollectionViewCell.m */,
-				C5A3746B1F4EE1A30039D380 /* PSDRcmdCollectionViewCell.xib */,
 				C5906A9F1F56BB48002F6770 /* PSDImgTableviewCell.h */,
 				C5906AA01F56BB48002F6770 /* PSDImgTableviewCell.m */,
 				C5906AA21F56BFAB002F6770 /* PSDInfoTableviewCell.h */,
@@ -304,12 +269,7 @@
 			files = (
 				C5FB96B61F4B346800C023FA /* Assets.xcassets in Resources */,
 				C5536C9C1F4F512300B5BB6C /* LaunchScreen.storyboard in Resources */,
-				C5A3746D1F4EE1A30039D380 /* PSDRcmdCollectionViewCell.xib in Resources */,
-				C5A374561F4EBEDC0039D380 /* PSDImageVC.xib in Resources */,
 				C5FB96B41F4B346800C023FA /* Main.storyboard in Resources */,
-				C5A374681F4ECDF60039D380 /* PSDRelatedVC.xib in Resources */,
-				C5A3745B1F4ECA950039D380 /* PSDInfoVC.xib in Resources */,
-				C5A374631F4ECDD20039D380 /* PSDIntroVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +331,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5A3745A1F4ECA950039D380 /* PSDInfoVC.m in Sources */,
 				C578DE3B1F4D4E9300DC8F0B /* ParkSpotItem.m in Sources */,
 				C5A3746C1F4EE1A30039D380 /* PSDRcmdCollectionViewCell.m in Sources */,
 				C55F2E171F4BCD1F009E3AB5 /* ParkSpotListVC.m in Sources */,
@@ -381,13 +340,10 @@
 				C5CDE5721F4EAF8E00EC3142 /* FlowManager.m in Sources */,
 				C5906AA11F56BB48002F6770 /* PSDImgTableviewCell.m in Sources */,
 				C5FB96AB1F4B346800C023FA /* main.m in Sources */,
-				C5A374551F4EBEDC0039D380 /* PSDImageVC.m in Sources */,
-				C5A374621F4ECDD20039D380 /* PSDIntroVC.m in Sources */,
 				C52DB2CB1F4DF71E00BE58E3 /* ParkSpotDetailVC.m in Sources */,
 				C5906AA41F56BFAB002F6770 /* PSDInfoTableviewCell.m in Sources */,
 				C51643201F4D88B5001293AD /* ParkSpotTableViewCell.m in Sources */,
 				C578DE381F4D16B400DC8F0B /* dataTPEService.m in Sources */,
-				C5A374671F4ECDF60039D380 /* PSDRelatedVC.m in Sources */,
 				C5906AA71F56BFC0002F6770 /* PSDIntroTableviewCell.m in Sources */,
 				C5CDE56F1F4E74F400EC3142 /* ParkSpotDCollectionViewCell.m in Sources */,
 			);
@@ -513,14 +469,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kenny Lin (S27666R2W3)";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ParkSpots_TPE/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.taiwanmobile.ParkSpot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taiwanmobile.myVideo3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "bde45735-6992-4198-8968-3defff6ac3d9";
+				PROVISIONING_PROFILE_SPECIFIER = "myVideo3 Development";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -531,14 +487,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kenny Lin (S27666R2W3)";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ParkSpots_TPE/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.taiwanmobile.ParkSpot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taiwanmobile.myVideo3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "bde45735-6992-4198-8968-3defff6ac3d9";
+				PROVISIONING_PROFILE_SPECIFIER = "myVideo3 Development";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
